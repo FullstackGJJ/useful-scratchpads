@@ -1,0 +1,10 @@
+tmux -L scratchPad -f scratch-pad.conf attach
+
+# To swap specific window with source and target
+swap-window -s 3 -t 1
+
+# To swap selected window with a known target window
+swap-window -t 0
+
+# To move window to an index that doesn't have an already existing window
+move-window -t 0

@@ -1,0 +1,101 @@
+# Building docker image from Dockerfile
+docker build <directory> -t <desired name>
+docker build . -t text_editor:neovim.tmux
+docker build . -t clojure:ubuntu.02_16_2021
+docker build . -t rust:ubuntu
+docker build . -t haskell_9.0:dev_env
+docker build Github/docker-ide/haskell -t haskell_9.0.1:dev_env
+docker build Github/docker-ide/haskell/editor -t haskell_editor
+docker build Github/docker-ide/haskell/editor/alpine -t haskell_editor:alpine
+docker build Github/docker-ide/haskell/runtime/9.0.1 -t haskell_9.0.1_runtime
+docker build Github/docker-ide/racket/editor -t racket_editor:alpine
+docker build Github/docker-ide/racket/runtime/8.3 -t racket_runtime:8.3 --no-cache
+docker build Github/docker-ide/racket/runtime/8.3 -t racket_runtime:8.3
+
+# To run docker image as container with setting current directory as shared volume
+docker run --detach -it --name <chosen_name> --volume <chosen_local_path>:<assigned_path_for_container> <docker_image_id> /bin/bash
+docker run --detach -it --name UbuntuTextEditor --volume $PWD:/hank text_editor:neovim.tmux /bin/bash
+docker run --detach -it --name Haskell --volume $PWD:/hank haskell:latest /bin/bash
+docker run --detach -it \
+    --name HaskellIDE \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --volume $PWD/.gitconfig:/root/.gitconfig \
+    haskell_9.0.1:dev_env \
+    /bin/zsh
+docker run --detach -it \
+    --name HaskellEditor \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --volume $PWD/.gitconfig:/root/.gitconfig \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    haskell_editor \
+    /bin/zsh
+docker run --detach -it \
+    --name HaskellEditor \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --mount type=bind,source="$(pwd)/.gitconfig",target=/root/.gitconfig \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    haskell_editor \
+    /bin/zsh
+docker run --detach -it \
+    --name HaskellEditor \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --mount type=bind,source="$(pwd)/.gitconfig",target=/root/.gitconfig \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    haskell_editor:alpine \
+    /bin/zsh
+docker run --detach -it \
+    --name RacketEditor \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --mount type=bind,source="$(pwd)/.gitconfig",target=/root/.gitconfig \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    racket_editor:alpine \
+    /bin/zsh
+docker run --detach -it \
+    --name HaskellRuntime \
+    --volume $PWD:/hank \
+    haskell_9.0.1_runtime \
+    /bin/zsh
+docker run --detach -it \
+    --name RacketRuntime \
+    --volume $PWD:/hank \
+    racket_runtime:8.3 \
+    /bin/zsh
+docker run --detach -it --name Clojure --volume $PWD:/hank clojure:latest /bin/bash
+docker run --detach -it --name Rust --volume $PWD:/hank rust:latest /bin/bash
+docker run --detach -it --name Elixir --volume $PWD:/hank elixir:latest /bin/bash
+
+# Start container
+docker container start UbuntuTextEditor
+docker container start Haskell
+docker container start HaskellIDE
+docker container start HaskellEditor
+docker container start HaskellRuntime
+docker container start Rust
+docker container start Clojure
+docker container start Elixir
+
+# To run bash in container
+docker exec -it <container_id> /bin/bash
+docker exec -it UbuntuTextEditor /bin/bash
+docker exec -it Haskell /bin/bash
+docker exec -it HaskellIDE /bin/bash
+docker exec -it HaskellIDE /bin/zsh
+docker exec -it HaskellEditor /bin/zsh
+docker exec -it HaskellRuntime /bin/zsh
+docker exec -it RacketEditor /bin/zsh
+docker exec -it RacketRuntime /bin/zsh
+docker exec -it Rust /bin/bash
+docker exec -it Clojure /bin/bash
+docker exec -it Elixir /bin/bash
+
+# Finding out what Linux OS you're running on
+cat /etc/os-release
+
+# Stop and remove container
+docker container stop RacketRuntime && docker container rm RacketRuntime && docker image rm racket_runtime:8.3
+docker container stop RacketEditor && docker container rm RacketEditor && docker image rm racket_editor:8.3
