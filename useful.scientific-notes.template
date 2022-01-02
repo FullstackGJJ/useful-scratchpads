@@ -10,6 +10,9 @@
 **Relevant skills before**:
 - 
 
+**Lessons Learned**:
+-
+
 Tutorials:
 - 
 
@@ -26,23 +29,32 @@ References:
 ---
 
 **Question**
-: 
+: Question
 
-**Hypothesis**
-: 
+**Research**
 
-**Observation**
-:
+- Idea: Based on (info), it's possible (that XYZ assertion is correct), (optional explanation)
+  - Result: When (ABC action was performed), (certain result happened), (optional analysis)
+
+**Answer**
+: Answer
 
 ---
 
 **Question**
-: <Question>
+: Question
 
-**Hypothesis**
-: Based on knowing <information> I expect <expectation> because <explanation>. I will try <action> and <expected-outcome> should happen
+**Research**:
 
-**Observation**
-: When I tried <action> I did/didn't get <expected-outcome>.  <Analysis of result>
+<details>
+
+<summary> Idea: Based on (info), it's possible (that XYZ assertion is correct), (optional explanation) </summary>
+
+>Outcome: When (ABC action was performed), (certain result happened), (optional analysis)
+
+</details>
+
+**Answer**
+: Answer
 
 ---
