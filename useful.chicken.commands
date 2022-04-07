@@ -1,0 +1,12 @@
+# Start chicken repl
+csi
+
+# Install package from repo code
+chicken-install
+
+# Check what eggs are installed
+chicken-status
+
+# Use the symbol '#' to access most recent return value
+
+# Use the symbol '#<number>' to access return value from <number>th evaluation
