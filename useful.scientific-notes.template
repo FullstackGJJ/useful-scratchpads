@@ -1,8 +1,12 @@
 # Big headline of task
 
-**Problem**: Problem being tackled
+**Context**: Context for problem/task
 
-**Solution**: Solution completed
+**Problem/Task**: Problem/task being tackled
+
+**Solution/Result**: Solution/Result completed
+
+**Implication**: Implication now that this solution/result exists
 
 **Relevant skills before**:
 
@@ -10,7 +14,7 @@
 
 **Lessons Learned**:
 
-**Engineering constraints**: 
+**Engineering constraints**:
 
 ## Tutorials:
 
@@ -24,7 +28,7 @@
 ---
 
 **Question**
-: Question, and reason why for the question
+: Question
 
 **Research**
 
@@ -32,6 +36,6 @@
   >Outcome: When (ABC action was performed), (certain result happened), (optional analysis)
 
 **Answer**
-: Answer, what does this mean now that you know the answer
+: Answer
 
 ---
