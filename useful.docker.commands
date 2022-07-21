@@ -7,10 +7,14 @@ docker build . -t haskell_9.0:dev_env
 docker build Github/docker-ide/haskell -t haskell_9.0.1:dev_env
 docker build Github/docker-ide/haskell/editor -t haskell_editor
 docker build Github/docker-ide/haskell/editor/alpine -t haskell_editor:alpine
+docker build Github/docker-ide/haskell/editor/debian -t haskell_editor:debian
 docker build Github/docker-ide/haskell/runtime/9.0.1 -t haskell_9.0.1_runtime
 docker build Github/docker-ide/racket/editor -t racket_editor:alpine
 docker build Github/docker-ide/racket/runtime/8.3 -t racket_runtime:8.3 --no-cache
 docker build Github/docker-ide/racket/runtime/8.3 -t racket_runtime:8.3
+docker build Github/docker-ide/racket/ide/8.3 -t racket_ide:8.3
+docker build Github/docker-ide/chicken/ide/5.1 -t chicken_ide:5.1
+docker build Github/docker-ide/idris2/ide/0.5.1 -t idris2:0.5.1
 
 # To run docker image as container with setting current directory as shared volume
 docker run --detach -it --name <chosen_name> --volume <chosen_local_path>:<assigned_path_for_container> <docker_image_id> /bin/bash
@@ -48,6 +52,14 @@ docker run --detach -it \
     haskell_editor:alpine \
     /bin/zsh
 docker run --detach -it \
+    --name HaskellEditor \
+    --volume $PWD:/hank \
+    --volume $PWD/.ssh:/root/.ssh \
+    --mount type=bind,source="$(pwd)/.gitconfig",target=/root/.gitconfig \
+    --volume /var/run/docker.sock:/var/run/docker.sock \
+    haskell_editor:debian \
+    /bin/zsh
+docker run --detach -it \
     --name RacketEditor \
     --volume $PWD:/hank \
     --volume $PWD/.ssh:/root/.ssh \
@@ -65,9 +77,25 @@ docker run --detach -it \
     --volume $PWD:/hank \
     racket_runtime:8.3 \
     /bin/zsh
+docker run --detach -it \
+    --name RacketIDE \
+    --volume $PWD:/hank \
+    racket_ide:8.3 \
+    /bin/zsh
+docker run --detach -it \
+    --name ChickenIDE \
+    --volume $PWD:/hank \
+    chicken_ide:5.1 \
+    /bin/zsh
+docker run --detach -it \
+    --name IdrisIDE \
+    --volume $PWD:/hank \
+    idris2:0.5.1 \
+    /bin/zsh
 docker run --detach -it --name Clojure --volume $PWD:/hank clojure:latest /bin/bash
 docker run --detach -it --name Rust --volume $PWD:/hank rust:latest /bin/bash
 docker run --detach -it --name Elixir --volume $PWD:/hank elixir:latest /bin/bash
+docker run --detach -it --name Idris --volume $PWD:/hank dgellow/idris2:v0.5.1 /bin/bash
 
 # Start container
 docker container start UbuntuTextEditor
@@ -78,6 +106,13 @@ docker container start HaskellRuntime
 docker container start Rust
 docker container start Clojure
 docker container start Elixir
+docker container start ChickenIDE
+
+# To start all stopped docker containers
+docker start $(docker ps -a -q)
+
+# To stop all docker containers
+docker stop $(docker ps -a -q)
 
 # To run bash in container
 docker exec -it <container_id> /bin/bash
@@ -89,9 +124,13 @@ docker exec -it HaskellEditor /bin/zsh
 docker exec -it HaskellRuntime /bin/zsh
 docker exec -it RacketEditor /bin/zsh
 docker exec -it RacketRuntime /bin/zsh
+docker exec -it RacketIDE /bin/zsh
+docker exec -it ChickenIDE /bin/zsh
+docker exec -it IdrisIDE /bin/zsh
 docker exec -it Rust /bin/bash
 docker exec -it Clojure /bin/bash
 docker exec -it Elixir /bin/bash
+docker exec -it Idris /bin/bash
 
 # Finding out what Linux OS you're running on
 cat /etc/os-release
@@ -99,3 +138,8 @@ cat /etc/os-release
 # Stop and remove container
 docker container stop RacketRuntime && docker container rm RacketRuntime && docker image rm racket_runtime:8.3
 docker container stop RacketEditor && docker container rm RacketEditor && docker image rm racket_editor:8.3
+docker container stop RacketIDE && docker container rm RacketIDE && docker image rm racket_ide:8.3
+docker container stop ChickenIDE && docker container rm ChickenIDE && docker image rm chicken_ide:5.1
+docker container stop HaskellEditor && docker container rm HaskellEditor && docker image rm haskell_editor:alpine
+docker container stop HaskellEditor && docker container rm HaskellEditor && docker image rm haskell_editor:debian
+docker container stop IdrisIDE && docker container rm IdrisIDE && docker image rm idris2:0.5.1
