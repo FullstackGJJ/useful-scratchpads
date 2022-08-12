@@ -1,0 +1,13 @@
+#+title: My TODO
+#+author: Hank Lin
+
+* Todo
+  - [-] Completing code for NodeJS CRON job
+  - [ ] "The Effective Engineer" - Edmond Lab
+
+* Left off
+** 
+
+* Information
+
+* Random thought:
