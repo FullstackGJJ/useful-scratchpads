@@ -1,7 +1,8 @@
-#+TITLE: <*Big headline of task*>
+#+TITLE: Big headline of task
 #+AUTHOR: <author>
 #+EMAIL: <email>
 #+DATE: <timestamp: SPC u , d t>
+#+OPTIONS: num:nil
 
 * *Context*: Context for problem/task
 
@@ -18,6 +19,7 @@
 * *Engineering constraints*:
 
 * *Resources*:
+
 ** [tutorial]:
 ** [how-to]:
 ** [explanation]:
