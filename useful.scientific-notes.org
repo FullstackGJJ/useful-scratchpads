@@ -1,68 +1,65 @@
 #+TITLE: Big headline of task
 #+AUTHOR: <author>
 #+EMAIL: <email>
-#+DATE: <timestamp: SPC u , d t>
+#+DATE: <timestamp: SPC u , d T>
 #+OPTIONS: num:nil
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
-* *Context*: Context for problem/task
+* *Description*
+** *Context*: Context for problem/task
+** *Problem/Task*: Problem/task being tackled
+** *Solution/Result*: Solution/Result completed
+** *Implication*: Implication now that this solution/result exists
 
-* *Problem/Task*: Problem/task being tackled
-
-* *Solution/Result*: Solution/Result completed
-
-* *Implication*: Implication now that this solution/result exists
-
-* *Prior relevant experience*:
-
-* *Doing for first time*:
-
-* *Engineering constraints*:
+* *Engineer Concerns*: 
+** *Prior relevant experience*:
+** *Doing for first time*:
+** *Engineering constraints*:
 
 * *Resources*:
-
 ** [tutorial]:
 ** [how-to]:
 ** [explanation]:
 ** [reference]:
 
 * *Thought Process*:
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Lead*: 
 
 *** *Action*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Current understanding*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Update*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Discovery*: 
 
 *** *Implication*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Accomplished*
 
 *** *What's Next*
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Drawn UML diagram based on my understanding*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Event model for before work*: 
 
 *** *How to show problem of not having work done*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Event model for after work*: 
 
 *** *How to test to prove work was a success**
 
 *** *How to test to prove existing functionality isn't broken?*: 
 
-** <timestamp: SPC u , d t>
+** <timestamp: SPC u , d T>
 *** *Question*: 
 **** *Idea*: Based on (info), it's possible (that XYZ assertion is correct), (optional explanation)
 **** *Outcome*: When (ABC action was performed), (certain result happened), (optional analysis)
