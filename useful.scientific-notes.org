@@ -5,18 +5,22 @@
 #+OPTIONS: num:nil
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
-* *Description*
+* *Description:*
+
 ** *Context*: Context for problem/task
+
 ** *Problem/Task*: Problem/task being tackled
+
 ** *Solution/Result*: Solution/Result completed
+
 ** *Implication*: Implication now that this solution/result exists
 
-* *Engineer Concerns*: 
+* *Engineer Concerns:* 
 ** *Prior relevant experience*:
 ** *Doing for first time*:
 ** *Engineering constraints*:
 
-* *Resources*:
+* *Resources:*
 ** [tutorial]:
 ** [how-to]:
 ** [explanation]:
