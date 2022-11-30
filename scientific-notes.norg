@@ -1,0 +1,6 @@
+@document.meta
+    title: Big headline of task
+    author: <author>
+    emails: <email>
+    created: <date>
+@end

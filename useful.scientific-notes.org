@@ -15,7 +15,7 @@
 
 ** *Implication*: Implication now that this solution/result exists
 
-* *Engineer Concerns:* 
+* *Engineer Concerns:*
 ** *Prior relevant experience*:
 ** *Doing for first time*:
 ** *Engineering constraints*:
