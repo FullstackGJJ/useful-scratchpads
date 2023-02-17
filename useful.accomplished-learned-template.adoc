@@ -1,0 +1,7 @@
+== Accomplishements:
+*Task Name Entry*
+* Detailed entries for task
+
+== Learned Along the Way:
+*Learned Concept Entry*
+* Detailed entries for concept learned
