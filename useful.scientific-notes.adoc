@@ -29,7 +29,7 @@ Author Name <author_name>; Author Email <email>; date <date>
 * |explanation|: ...
 * |reference|: ...
 
-`vim !!date command for timestamp`
+`vim type "!!date<CR>" for timestamp`
 
 == Thought Process:
 
