@@ -10,3 +10,9 @@ chicken-status
 # Use the symbol '#' to access most recent return value
 
 # Use the symbol '#<number>' to access return value from <number>th evaluation
+
+# Create importable module from file
+csc -J <file>
+
+# Create program binary
+csc <program entry file>
