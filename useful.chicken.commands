@@ -11,6 +11,17 @@ chicken-status
 
 # Use the symbol '#<number>' to access return value from <number>th evaluation
 
+# For help
+,?
+
+# You have to switch to module in order to use the module even if you loaded it into the chicken repl
+,m <module-name>
+
+# To import a chicken internal module in the repl, you need to add chicken with a period in front of the package
+(import chicken.pretty-print)
+# or
+(import (chicken pretty-print))
+
 # Create importable module from file
 csc -J <file>
 
