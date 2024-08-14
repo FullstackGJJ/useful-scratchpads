@@ -19,7 +19,15 @@
 
 **Doing for first time**:
 
+**Lessons Learned**:
+
 **Engineering constraints**:
+
+**Complexity factors**:
+- How to prove work is done?: How can you demonstrate work was done in a clear black and white manner? If this is complex chances are your work is going to be complex because of this bottleneck
+- Domain Changes?: Do you have to change the assumptions the codebase's domain has? What are they if you do?
+- Event Changes?: Do you have to change the events that happen in the overall ecosystem? What are they if you do?
+- System Changes?: Do you have to change the actual system that exist in the ecosystem? What changes if you do?
 
 ## Resources:
 - |tutorial|: ...

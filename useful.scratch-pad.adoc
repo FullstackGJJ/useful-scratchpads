@@ -1,0 +1,25 @@
+Squashing current branch’s commits for merge bot’s merge PR clarity
+```
+  git pull origin develop --rebase
+  git reset --soft origin/develop
+  git commit -m "commit message"
+  git push --force
+```
+
+Git cherry pick diffs into another branch:
+Step 1: Go to the branch where you have the commit with the files you'd like to stage
+Step 2: Copy the commit hash you're interested in with, `git log`
+Step 3: Go the branch where you'd like to create changes in, git checkout <my-branch>
+Step 4: Stage the files by entering `git cherry-pick -n <commit-hash>`
+Step 5: You should see the files staged
+
+VIM diff: Use split window with both files and then use the command `:diffthis` in each window
+
+Working stripe test card docs https://docs.stripe.com/testing#cards
+
+* Adding gif to markdown in github: seal of approval ![Alt Text](https://media.giphy.com/media/13zeE9qQNC5IKk/giphy.gif)
+* Adding gif to markdown in github: world peace ![Alt Text](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjg2OWU0enB1dGNja2lwbTNrNzN1cG1lbDIyaHVyZGNsNm5icWRkbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JYKQ0lf8FEATQcQqdA/giphy.gif)
+* Instead of giving concrete tasks/goals give abstract thought process goals when someone is working through complexity
+* Proactively follow up on understanding/thinking atleast once during open office hours in addition to waiting for people to come needing help when someone ran into thought requiring roadblocks
+* Hash out the thinking/understanding before the goal deadline of an intermittent goal of the day
+* When it comes to someone changing code hash out the way to test and the smallest changes to inch towards completion. Don't let someone try to complete it all in one go without feedback testing.
