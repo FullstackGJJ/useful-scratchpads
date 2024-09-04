@@ -33,6 +33,16 @@ Author Name <author_name>; Author Email <email>; date <date>
 
 `vim type "!!date<CR>" for timestamp`
 
+== Engineering Phases:
+* *Discovery*: Exploring the problem, researching relevant domain/subject matter space, understanding alternatives, ideal target audience if any, definition of quality
+* *Shaping*: Working with relevant parties to write out use cases, define ideal experience and acceptable pragmatic to implement experience. What is definition of done.
+* *Design*: Define clear product requirements including technical domain detail, craft final designs, create work plan, estimate timeline, define learning/test plan
+* *Build*: Execute, test
+* *Launch*: Monitor, follow up research
+
+== Detailed Applied Engineering Phases:
+* 
+
 == Thought Process:
 
 '''
