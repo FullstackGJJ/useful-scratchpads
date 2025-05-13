@@ -41,7 +41,9 @@ Author Name <author_name>; Author Email <email>; date <date>
 * *Launch*: Monitor, follow up research
 
 == Detailed Applied Engineering Phases:
-* 
+* Example:
+* *Discovery*: XYZ was found out during Discovery
+* *Shaping*: Collaboration with various teams led to XYZ to be accepted
 
 == Thought Process:
 
