@@ -79,13 +79,13 @@ Author Name <author_name>; Author Email <email>; date <date>
 
 '''
 
-*Event model and Decision Flowchart for before work*: 
+*Event model and Decision-Making Flowchart for before work*: 
 
 *How to show problem of not having work done*:
 
 '''
 
-*Event model and Decision Flowchart for after work*:
+*Event model and Decision-Making Flowchart for after work*:
 
 *How to test to prove work was a success*:
 
