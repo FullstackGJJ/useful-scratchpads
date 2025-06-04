@@ -6,6 +6,8 @@ Author Name <author_name>; Author Email <email>; date <date>
 
 *Problem/Task*: Problem/task being tackled
 
+*Acceptance Criteria*: Definition of reaching the end
+
 *Solution/Result*: Solution/Result completed
 
 *Implication*: Implication now that this solution/result exists
@@ -79,7 +81,7 @@ Author Name <author_name>; Author Email <email>; date <date>
 
 '''
 
-*Event model and Decision-Making Flowchart for before work*: 
+*Event model and Decision-Making Flowchart for before work*:
 
 *How to show problem of not having work done*:
 
