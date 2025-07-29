@@ -6,7 +6,7 @@ Author Name <author_name>; Author Email <email>; date <date>
 
 *Problem/Task*: Problem/task being tackled
 
-*Acceptance Criteria*: Definition of reaching the end
+*Acceptance Criteria*: Definition of reaching the end (based on https://cucumber.io/docs/terms/user-story)
 
 *Solution/Result*: Solution/Result completed
 
